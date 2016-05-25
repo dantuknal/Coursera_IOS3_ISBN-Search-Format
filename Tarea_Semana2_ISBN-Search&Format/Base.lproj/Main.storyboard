@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tarea_Semana2_ISBN_Search_Format" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tq-EE-RTE">
+                                <rect key="frame" x="20" y="142" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.8862745098" green="0.39607843139999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="Wf2-Ox-byv"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ws1-Ae-aaX"/>
+                                </constraints>
+                                <state key="normal" title="Buscar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buscarISBN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PIB-Vq-Yuk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_OL-lg" translatesAutoresizingMaskIntoConstraints="NO" id="z7r-Tp-D7y">
+                                <rect key="frame" x="110" y="46" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ETy-wd-BK2"/>
+                                    <constraint firstAttribute="height" constant="50" id="OLB-iZ-uMb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Ingresa el ISBN que deseas buscar" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="qFx-DW-jTI">
+                                <rect key="frame" x="20" y="104" width="280" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Rhx-lx-VmE"/>
+                                    <constraint firstAttribute="width" constant="280" id="etN-d7-eUT"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="04L-Gw-KlA"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urH-mZ-Xey">
+                                <rect key="frame" x="20" y="518" width="280" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="N1C-du-cC0"/>
+                                    <constraint firstAttribute="width" constant="280" id="Uf9-IY-abL"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Limpiar todo"/>
+                                <connections>
+                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oNk-vw-slJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-FH-hc9">
+                                <rect key="frame" x="20" y="244" width="100" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="F1d-Ts-quE"/>
+                                    <constraint firstAttribute="width" constant="100" id="PvQ-U7-ouF"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="{No se encontraron autores para este libro}" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQG-pA-9TK">
+                                <rect key="frame" x="130" y="291" width="170" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="120" id="4eb-vc-4wA"/>
+                                    <constraint firstAttribute="width" constant="170" id="8Q2-eb-7dB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SS-TT-c0r">
+                                <rect key="frame" x="130" y="319" width="170" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="FfY-zo-wKi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="bKH-0G-5DB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{No se encontró titulo para este libro}" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXH-Ue-4Li">
+                                <rect key="frame" x="130" y="244" width="170" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="BEh-IV-Im7"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="Mft-Ec-LGV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88624411820000004" green="0.83760869500000001" blue="0.78042662139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q0F-FH-hc9" firstAttribute="top" secondItem="4tq-EE-RTE" secondAttribute="bottom" constant="72" id="5tB-0R-m40"/>
+                            <constraint firstItem="qFx-DW-jTI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEK-Qt-iUG"/>
+                            <constraint firstItem="4tq-EE-RTE" firstAttribute="top" secondItem="qFx-DW-jTI" secondAttribute="bottom" constant="8" id="IGW-QI-0Gj"/>
+                            <constraint firstItem="DXH-Ue-4Li" firstAttribute="top" secondItem="4tq-EE-RTE" secondAttribute="bottom" constant="72" id="P8U-YW-V6R"/>
+                            <constraint firstItem="OQG-pA-9TK" firstAttribute="leading" secondItem="q0F-FH-hc9" secondAttribute="trailing" constant="10" id="QAZ-RG-BxY"/>
+                            <constraint firstItem="qFx-DW-jTI" firstAttribute="top" secondItem="z7r-Tp-D7y" secondAttribute="bottom" constant="8" id="TfW-lq-x6e"/>
+                            <constraint firstItem="9SS-TT-c0r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="55" id="WgW-VN-dML"/>
+                            <constraint firstItem="9SS-TT-c0r" firstAttribute="top" secondItem="OQG-pA-9TK" secondAttribute="bottom" constant="8" id="e8j-8R-3li"/>
+                            <constraint firstItem="DXH-Ue-4Li" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="55" id="f9L-3Y-Gvv"/>
+                            <constraint firstAttribute="bottom" secondItem="urH-mZ-Xey" secondAttribute="bottom" constant="20" symbolic="YES" id="fQ3-Ko-fNR"/>
+                            <constraint firstItem="OQG-pA-9TK" firstAttribute="top" secondItem="DXH-Ue-4Li" secondAttribute="bottom" constant="8" id="gyV-Lb-LbR"/>
+                            <constraint firstItem="z7r-Tp-D7y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="h0N-Dr-XnK"/>
+                            <constraint firstItem="urH-mZ-Xey" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iGM-CU-iLi"/>
+                            <constraint firstItem="4tq-EE-RTE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mdH-dE-Z30"/>
+                            <constraint firstItem="z7r-Tp-D7y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oWY-AD-1IW"/>
+                            <constraint firstItem="OQG-pA-9TK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="54.5" id="wob-dS-hWT"/>
+                        </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="zEN-or-kyL"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="autores" destination="OQG-pA-9TK" id="9iP-lE-PA1"/>
+                        <outlet property="botLimpiar" destination="4tq-EE-RTE" id="0Ma-MC-nJw"/>
+                        <outlet property="by_statement" destination="9SS-TT-c0r" id="jat-HE-hVA"/>
+                        <outlet property="cover" destination="q0F-FH-hc9" id="IHV-Qv-t4d"/>
+                        <outlet property="isbnTextField" destination="qFx-DW-jTI" id="bI8-34-RYN"/>
+                        <outlet property="titulo" destination="DXH-Ue-4Li" id="495-xD-Uuq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="406"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image1" width="137" height="186"/>
+        <image name="logo_OL-lg" width="220" height="140"/>
+    </resources>
+    <color key="tintColor" red="0.8862745098" green="0.39607843139999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+</document>
